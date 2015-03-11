@@ -7,7 +7,7 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Surfspots Australia</name>
+    <name>Urlaubsroute</name>
 
     <description>
         An example for phonegap build docs. 
@@ -18,7 +18,7 @@
     </author>
     
 
-	<icon src="surfing-modified-md.png" />
+	<icon src="icon_reisepic.png" />
 	
 	
 </widget>
