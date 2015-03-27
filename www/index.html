@@ -9,10 +9,8 @@
     <link rel="stylesheet" type="text/css" href="leaflet-0.7.3/leaflet.css" />
 	<link rel="stylesheet" type="text/css" href="index.css" />
     
-	
-	
-	
 </head>
+
 <body>
 	<div id="map" style="width: 100%; height: 100%"></div>
 	
@@ -43,14 +41,14 @@
 		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 		});
 
-	var surfIcon = L.icon({
-		iconUrl: 'surf.png',
+	var eatIcon = L.icon({
+		iconUrl: 'eat.png',
 		shadowUrl: 'surfshadow.png',
    
-		iconSize:     [38, 95], // size of the icon
+		iconSize:     [38, 60], // size of the icon
 		shadowSize:   [50, 64], // size of the shadow
 		iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-		shadowAnchor: [12, 86],  // the same for the shadow
+		shadowAnchor: [20, 96],  // the same for the shadow
 		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 		});
 		
@@ -88,6 +86,15 @@
 		
 		
 		
+		L.marker([35.497049, 138.767497],{icon: greenIcon}). addTo(map)
+				.bindPopup ("<b>FUJI</b> <p> Am Fuß des wohl symmetrischsten Berg der Welt. Wundervolle Seeenlandschaft. Und sehr liebe und nette Bewohner trotz vieler Touris <p/>");		
+		
+		L.marker([35.011277, 135.662996],{icon: greenIcon}). addTo(map)
+				.bindPopup ("<b>ARASHIYAMA BAMBUS WALD</b> <p> Stille und ganz tolle Ruhige Atmosphäre inmitten der japanischen Hektik. <p/>");		
+		
+		
+		
+		
 		L.marker([-30.746001, 152.996232],{icon: bedIcon}). addTo(map)
 				.bindPopup ("<b>SCOTTS HEAD</b> <p>Wunderbarer Platz um die Seele baumeln zu lassen. Weit weg von Backpackern. Ein echter Insidertip in einem Minikaff mit dem leckeresten Bäcker<p/>");		
 				
@@ -109,11 +116,29 @@
 		L.marker([-33.73003, 150.29778],{icon: bedIcon}). addTo(map)
 				.bindPopup ("<b>KATOOMBA CAMP SITE</b> <p>Toll gelegener Campingplatz. Von hier aus kann man Wanderungen antreten zu den Three Sisters oder auch in kleine aber feine Stadt spazieren<p/> <p>Der Campingplatz ist trotz Tourianzugspunkte sehr ruhig und nicht überbevölkert und bietet eine schöne Küche und ein sauberes Bad<p/>");
 
+		// JAPAN		
 				
-				
-				
-L.marker([-35.914635, 150.15769899999998],{icon: surfIcon} ).addTo(map)
-			.bindPopup("<b>Moruya Heads</b> <p> wahnsinnig toller Spot für NE - E </p> <p> liegt sehr versteckt im kleinen Naturreservat von Moruya Heads</p><p> Am relativ grossen Rivermouth mit langer Steinmole laden lange Wellen zum Spielen ein </p> <p> KeinAnfängerspot aufgrund kleinem Beach, Mole und auflandigem Wind </p><p> Direkt hinter dem Beach grosse Wiese zum Materialtrocknen </p> <p> Trotz Einsamkeit Dusche, Toilette und Barbie </p> ").openPopup();
+		L.marker([34.996418, 135.756354],{icon: bedIcon}). addTo(map)
+				.bindPopup ("<b> KYOTO HOTEL </b> <p>Preis erste Sahne und Ausstattung ziemlich luxeriös<p/> <p> Hotel mit PLATZ, viel Platz<p/>");
+
+		
+		// FIJI		
+
+		L.marker([-18.227277, 177.772736],{icon: bedIcon}). addTo(map)
+				.bindPopup ("<b> BEACHHOUSE  </b> <p>Seele baumeln lassen nach einem intensiven Trip<p/> <p> Viel Natur sowohl in der Anlage als auch drum herum. Viele liebe Menschen die einfach das Leben und die Wellen genießen<p/>");
+		
+		L.marker([-17.804180, 177.415090],{icon: bedIcon}). addTo(map)
+				.bindPopup ("<b> Horror Hotel NADI DOWNTOWN </b> <p>Auf einer Reise passieren auch unschöne Sachen: dieses Hostel war der Horror, kann man also gepflegt links liegen lassen. Das gilt auch für Nadi-die Stadt ansich<p/>");
+
+
+		// EAT
+		
+			L.marker([35.661706, 139.768187],{icon: eatIcon}). addTo(map)
+				.bindPopup ("<b> FISCHMARKT </b> <p>frischste Sushi der Welt <p/> <p> gewöhnungsbedürftig ist es das es morgens um 5 Uhr losgeht. Aber traumhaft lecker und soooo unsagbar frisch. ABER winzig kleine Shushibars und es kann soweit gehen das man anstehen muss!! Auch morgens um die unchristliche Uhrzeit<p/>");
+		
+			L.marker([34.679880, 135.174938],{icon: eatIcon}). addTo(map)
+				.bindPopup ("<b> KOBERINDFLEISCH </b> <p>den Namen hier auf japanisch zu schreiben ist eine herausforderung - es ist eine ganze Show die wärend dem Essen zu einem tollen und schmackhaften Event wird <p/>");
+		
 		
 		
 		var popup = L.popup();
@@ -124,7 +149,6 @@ L.marker([-35.914635, 150.15769899999998],{icon: surfIcon} ).addTo(map)
 				.setContent("Koordinaten an dieser Stelle " + e.latlng.toString())
 				.openOn(map);
 		}
-
 		map.on('click', onMapClick);
 		
 		function onLocationFound(e) {
@@ -145,9 +169,6 @@ L.marker([-35.914635, 150.15769899999998],{icon: surfIcon} ).addTo(map)
 
 		map.locate({setView: true, maxZoom: 16});
 
-
-		
-	
     </script>
 </body>
 </html>
